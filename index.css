@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    color: #222222;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Presentation */
+
+#presentation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+#presentation > img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+#presentation > h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    margin-top: 15px;
+    font-weight: 800;
+}
+
+#presentation > p {
+    color: #888888;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    color: #ffffff;
+    background-image: linear-gradient(93.93deg, rgba(217, 94, 146, 0.2) 5.62%, rgba(217, 94, 146, 0) 80.06%), linear-gradient(180deg, #648BDC 0%, #756EED 100%);
+    box-shadow: 0px 4px 10px rgba(101, 139, 221, 0.5);
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.5s box-shadow;
+}
+
+.btn:hover {
+    box-shadow: 0px 4px 20px rgba(101, 139, 221, 1);
+}
+
+.btn:active {
+    transform: none;
+    box-shadow: none;
+}
+
+
+#contact {
+    display: flex;
+}
+
+#contact > a {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: 0.5s background-color;
+}
+
+#contact > a:hover {
+    opacity: 1;
+    background-color: hsla(243, 66%, 62%, 0.2);
+}
+
+#contact > a:active {
+    transform: none;
+    box-shadow: none;
+}
+
+#contact a:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* Projects */
+
+#projects {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+    max-width: 800px;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project {
+    padding: 20px;
+}
+
+.project > img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.project > h3 {
+    padding: 0 10px;
+    margin: 0;
+}
+
+.project > h4 {
+    padding: 0 10px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.project > p {
+    padding: 0 10px;
+    color: #888888;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.project > a {
+    color: hsl(243, 66%, 62%);
+    margin: 0 10px;
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.project > a:hover {
+    border-bottom: 2px solid hsla(243, 66%, 62%, 0.4);
+}
+
+#projects > .btn {
+    width: 155px;
+    margin: auto;
+}
+
+/* Small screens adjustements */
+
+@media (max-width: 600px) {
+    #presentation > h1 {
+        font-size: 2.2rem;
+    }
+    #presentation > p {
+        font-size: 1em;
+    }
+    #grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Animations */
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#presentation > img {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards;
+}
+
+#presentation > h1 {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.2s;
+}
+
+#presentation > p {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.4s;
+}
+
+#presentation > .btn {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.6s;
+}
+
+#contact > a[title="Github"] {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.7s;
+}
+
+#contact > a[title="LinkedIn"] {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.8s;
+}
+#contact > a[title="Instagram"] {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.9s;
+}
+#contact > a[title="Resume"] {
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 1s;
+}
+
+@keyframes coucou {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(15deg);
+    }
+    10% {
+        transform: rotate(-15deg);
+    }
+    15% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#presentation > h1 > span {
+    display: inline-block;
+    animation: coucou 10s ease-in-out infinite 1.5s;
+}
+
+/* Css background inspired by https://codepen.io/chris22smith/pen/RZogMa */
+
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+    100% {
+        transform:translateX(25%);
+    }
+}
+
+.bg {
+    animation: slide 6s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(191, 196, 227) 50%, rgb(199, 222, 244) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+  
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration: 8s;
+}
+  
+.bg3 {
+    animation-duration: 10s;
+}
