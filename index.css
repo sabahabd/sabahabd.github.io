@@ -26,9 +26,11 @@ html, body {
 }
 
 #picture{
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: fit-content;
+    height: 100px;
+    border-radius: 50px;
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.2s;
 }
 
 #presentation > h1 {
