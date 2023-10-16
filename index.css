@@ -19,15 +19,13 @@ html, body {
 
 #presentation {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    /*justify-content: center;*/
     width: 100%;
     height: 100%;
     padding: 20px;
 }
 
-#presentation > img {
+#picture{
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -43,7 +41,6 @@ html, body {
 #presentation > p {
     color: #888888;
     font-size: 1.2rem;
-    text-align: center;
     margin-top: 5px;
     margin-bottom: 15px;
 }
@@ -196,7 +193,7 @@ h2 {
     }
 }
 
-#presentation > img {
+#picture {
     opacity: 0;
     animation: 0.5s appear ease-in-out forwards;
 }
@@ -214,6 +211,7 @@ h2 {
 #presentation > .btn {
     opacity: 0;
     animation: 0.5s appear ease-in-out forwards 0.6s;
+    width: fit-content;
 }
 
 #contact > a[title="Github"] {
@@ -260,6 +258,48 @@ h2 {
     animation: coucou 10s ease-in-out infinite 1.5s;
 }
 
+#illustration {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    animation: 0.5s appear ease-in-out forwards 0.9s;
+}
+
+.getInTouch {
+    display: flex;
+    color: #ffffff;
+    background-image: linear-gradient(93.93deg, rgba(217, 94, 146, 0.2) 5.62%, rgba(217, 94, 146, 0) 80.06%), linear-gradient(180deg, #648BDC 0%, #756EED 100%);
+    box-shadow: 0px 4px 10px rgba(101, 139, 221, 0.5);
+    padding: 1px 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.5s box-shadow;
+    width: fit-content;
+}
+
+.getInTouch:hover {
+    box-shadow: 0px 4px 20px rgba(101, 139, 221, 1);
+}
+
+.getInTouch:active {
+    transform: none;
+    box-shadow: none;
+}
+
+#mail > img {
+    margin-left: 15px;
+    margin-top: 7px;
+    width: 40px;
+    height: 40px;
+}
+
+
 /* Css background inspired by https://codepen.io/chris22smith/pen/RZogMa */
 
 @keyframes slide {
@@ -300,7 +340,7 @@ h2 {
     background-color: transparent;
     top: 0;
     right: 0;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .nav-item {
@@ -331,6 +371,9 @@ h2 {
 .nav {
     width: auto;
     height: fit-content;
+    opacity: 0;
+    animation: 0.5s appear ease-in-out forwards 0.2s;
+
 }
 
 .nav-item > a {
@@ -340,3 +383,62 @@ h2 {
     font-weight: 700;
     text-decoration: none;
 }
+
+/*About Me*/
+
+.aboutMe {
+    display: flex;
+    height: fit-content;
+    position: relative;
+}
+
+#content {
+    position: relative;
+}
+
+#screen {
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+}
+
+.typewriter {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    overflow: hidden; /* Pour cacher le texte restant */
+    white-space: nowrap; /* Pour afficher le texte en une seule ligne */
+    margin: 0 auto; /* Pour centrer le texte */
+    letter-spacing: .15em; /* Espacement des lettres */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+.typewriter > pre {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    padding: 150px;
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
