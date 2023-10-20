@@ -50,6 +50,10 @@ h1 {
 }
 
 #presentation {
+    height: 100svh;
+}
+
+#terminal-img {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -58,7 +62,7 @@ h1 {
 #terminal {
     background-color: #444444;
     border-radius: 1rem;
-    min-height: 10rem;
+    min-height: 18rem;
     width: 50%;
 
 }
@@ -126,7 +130,6 @@ font-family: Inconsolata;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 10rem;
 }
 
 
